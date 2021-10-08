@@ -65,8 +65,8 @@ define Package/xray-geodata
 endef
 
 define Package/xray/description
-  Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.
-  It secures your network connections and thus protects your privacy.
+Xray Penetrates Everything. Also the best v2ray-core with XTLS support. Fully compatible configuration.
+It secures your network connections and thus protects your privacy.
 endef
 
 define Package/xray-core/description
