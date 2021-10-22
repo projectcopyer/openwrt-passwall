@@ -95,7 +95,7 @@ o.validate = function(self, value, t)
     end
 end
 
-o = s:option(DummyValue, "_node_count")
+o = s:option(DummyValue, "_node_count",translate("Node num"))
 o.rawhtml = true
 o.cfgvalue = function(t, n)
     local remark = m:get(n, "remark") or ""
