@@ -104,6 +104,7 @@ config V2RAY_CORE_COMPRESS_GOPROXY
 
 config V2RAY_CORE_COMPRESS_UPX
 	bool "Compress executable files with UPX"
+	depends on @!mips64
 	default y
 endmenu
 endef
@@ -118,6 +119,7 @@ config V2RAY_CTL_COMPRESS_GOPROXY
 
 config V2RAY_CTL_COMPRESS_UPX
 	bool "Compress executable files with UPX"
+	depends on @!mips64
 	default y
 endmenu
 endef
@@ -200,4 +202,3 @@ $(eval $(call BuildPackage,v2ray-core))
 $(eval $(call BuildPackage,v2ray-ctl))
 $(eval $(call BuildPackage,v2ray-extra))
 $(eval $(call BuildPackage,v2ray-geodata))
-
