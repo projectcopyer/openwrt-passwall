@@ -1,0 +1,25 @@
+From 7f2f23e92ef927e27fcd8e23d44ae445898ad650 Mon Sep 17 00:00:00 2001
+From: W_Y_CPP <383152993@qq.com>
+Date: Thu, 2 Dec 2021 20:02:45 -0800
+Subject: [PATCH] fix musl 1.2.x
+
+---
+ chinadns.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/chinadns.c b/chinadns.c
+index 0dc6eba..43adc46 100644
+--- a/chinadns.c
++++ b/chinadns.c
+@@ -506,7 +506,7 @@ int main(int argc, char *argv[]) {
+     if (strlen(g_remote_ipports[TRUSTDNS2_IDX])) LOGINF("[main] trustdns server#2: %s", g_remote_ipports[TRUSTDNS2_IDX]);
+     LOGINF("[main] ipset ip4 setname: %s", g_ipset_setname4);
+     LOGINF("[main] ipset ip6 setname: %s", g_ipset_setname6);
+-    LOGINF("[main] dns query timeout: %ld seconds", g_upstream_timeout_sec);
++    LOGINF("[main] dns query timeout: %lld seconds", g_upstream_timeout_sec);
+     if (g_gfwlist_fname) LOGINF("[main] gfwlist entries count: %zu", dnl_init(g_gfwlist_fname, true));
+     if (g_chnlist_fname) LOGINF("[main] chnlist entries count: %zu", dnl_init(g_chnlist_fname, false));
+     if (g_gfwlist_fname && g_chnlist_fname) LOGINF("[main] %s have higher priority", g_gfwlist_first ? "gfwlist" : "chnlist");
+-- 
+2.17.1
+
