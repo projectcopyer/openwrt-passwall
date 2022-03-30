@@ -1438,6 +1438,7 @@ stop() {
 	rm -rf ${TMP_PATH}
 	rm -rf /tmp/lock/${CONFIG}_script.lock
 	echolog "清空并关闭相关程序和缓存完成。"
+	/etc/init.d/sysctl restart
 	exit 0
 }
 
